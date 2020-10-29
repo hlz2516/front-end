@@ -1,0 +1,8 @@
+内核作用：负责读取网页内容并显示。
+IE->trident
+firefox->gecko
+safari->webkit
+chrome/opera/edge->blink
+
+目前国内浏览器一般都会采用webkit/blink内核，如360,uc等
+
