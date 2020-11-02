@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- form:表单域，用来包含表单元素 -->
+    <form>
+        <!-- maxlength限制输入字段中的字段的最大长度 -->
+        <!-- label通过for与对应id的input元素相关联，当用户点击label时相当于点击对应的Input元素，增大了用户体验 -->
+        <label for="username">用户名：</label><input type="text" maxlength="6" id="username"> <br>
+        <label for="pwd">密码：</label><input type="password" id="pwd"><br>
+        <!-- 
+            radio相关属性
+            name    input元素的名称
+            value   input元素的值
+            checked 此input元素首次加载时应当被选中
+            只有name属性相同的radio才能实现多选一,checkbox同理
+            每个radio都要定义自己的值，以便用户选择后将其值传到服务器，checkbox同理
+         -->
+        性别： <label for="male">男</label><input type="radio" name="sex" id="male" value="男">
+                 <label for="female">女</label><input type="radio" name="sex" id="female" value="女" checked="checked"><br>
+        爱好:  <label for="eat">吃饭</label><input type="checkbox" name="hobby" id="eat" value="eat"> 
+                <label for="sleep">睡觉</label><input type="checkbox" name="hobby" id="sleep" value="sleep" checked="checked">
+                <label for="play">打豆豆</label><input type="checkbox" name="hobby" id="play" value="play">
+        <br>
+        <input type="submit" value="注册">
+        <input type="reset" value="重置">
+        <input type="button" value="获取短信验证码"> <br>
+        上传头像： <input type="file">
+    </form>
+</body>
+</html>
