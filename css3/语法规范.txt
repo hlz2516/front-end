@@ -1,0 +1,9 @@
+css规则主要由两部分组成：选择器以及一条或多条声明。如：
+        .list{  //list为选择器
+            list-style-type: none;  //list-style-type为属性，none为值
+            padding:0%;
+        }
+
+选择器是用于指定CSS样式的HTML标签，花括号内是对该对象设置的具体样式
+属性和属性值以“键值对”形式出现
+属性和属性值之间用英文“;”隔开
