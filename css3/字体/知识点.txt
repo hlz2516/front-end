@@ -2,3 +2,28 @@
     各种字体之间必须使用英文状态下的逗号隔开
     一般情况下，如果有空格隔开的多个单词组成的字体，加引号
     尽量使用系统默认自带的字体
+
+字体大小(font-size)
+    例：p { font-size: 20ox;}
+    px（像素）是网页常用单位
+    谷歌浏览器默认大小16px
+    不同浏览器默认字号大小不一致，所以在设计字体大小时应给一个明确的值
+    可以给整个Body设置字体大小
+
+字体粗细(font-weight)
+    属性值：bold,bolder,lighter
+    更常用的是使用Number来定量设置粗细，如:
+    .bold {font-weight: 500;} //注意500后面不要跟单位
+    400==normal     700==bold
+
+文字样式(font-style)
+    例：p { font-style: normal;}
+    属性值有normal,italic(斜体)
+
+复合属性
+    字体属性可以把以上文字样式综合来写，这样可以更节约代码
+    格式：
+    选择器 {
+        font:font-style font-weight font-size font-family;
+    }
+    可以不写font-size前面的属性值(取默认值)，但是font-size以及其后面的属性值一定要有
