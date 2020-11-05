@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 后代选择器 */
+        ul li {
+            color: blue;
+        }
+        /* 同后代，最好写上中间的子级标签，语义更清晰 */
+        ul a {
+            color: red;
+        }
+        .nav1 li a{
+            color: red;
+        }
+        .son>a {
+            color: red;
+        }
+        /* 将熊大，熊二，小猪一家都改为粉色 */
+        /* 约定规范，并集选择器竖着写 */
+        .one,
+        .two,
+        .pig>li {
+            color: pink;
+        }
+        /* 链接伪类选择器，注意必须按照lvha的顺序书写！ */
+        /* 为访问状态 */
+        .link:link {
+            color: #333;
+        }
+        /* 已访问 */
+        .link:visited {
+            color: red;
+        }
+        /* 鼠标经过时 */
+        .link:hover {
+            color: deepskyblue;
+        }
+        /* 鼠标点击时 */
+        .link:active {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+        <li><a href="">d</a></li>
+    </ul>
+    <br>
+    <ol class="nav1">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li><a href="">4</a></li>
+        <li><a href="">5</a></li>
+        <li><a href="">6</a></li>
+    </ol>
+    <br>
+    <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li><a href="">4</a></li>
+        <li><a href="">5</a></li>
+        <li><a href="">6</a></li>
+    </ol>
+    <br>
+    <div class="son">
+        <a href="">我是儿子</a>
+        <p>
+            <a href="">我是孙子</a>
+        </p>
+    </div>
+    <br>
+
+    <div class="one">熊大</div>
+    <p class="two">熊二</p>
+    <span>光头强</span>
+    <ul class="pig">
+        <li>小猪佩奇</li>
+        <li>猪爸爸</li>
+        <li>猪妈妈</li>
+    </ul>
+    <br>
+    <a href="#" class="link">这是一个链接</a>
+</body>
+
+</html>

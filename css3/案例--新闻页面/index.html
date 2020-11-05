@@ -6,11 +6,14 @@
     <title>Document</title>
     <style>
         body {
-            font-family: 'Microsoft Yahei';
+            font:16px/28px 'Microsoft Yahei';
         }
         h2 {
             font-weight: 500;
             text-align: center;
+        }
+        .nobottomline {
+            text-decoration: none;
         }
         .list{
             list-style-type: none;
@@ -23,40 +26,68 @@
             *display:inline;
             *zoom:1;
         }
-        .brown{
-            color: rgb(206, 204, 206);
+        .center {
+            text-align: center;
+        }
+        .gray{
+            color: #888888;
+        }
+        .darkgrey {
+            color: darkgrey;
         }
         .second {
             font-size: 12px;
             line-height: 16px;
         }
+        p {
+            text-indent: 2em;
+        }
     </style>
 </head>
 <body>
     <h2>北方高温明日达鼎盛 京津翼多地地表温度将超60℃</h2>
-    <div style="text-align: center;">
+    <div class="center">
         <!-- 第一种方式 -->
-        <span class="brown second">2019-07-03 16:31:47 </span>
-        <span class="brown second">来源:</span>
-        <span><a href="#" class="second">中国天气网</a></span>
+        <span class="gray second">2019-07-03 16:31:47 </span>
+        <span class="gray second">来源:</span>
+        <span><a href="#" class="second nobottomline">中国天气网</a></span>
         <span>
             <form action="" style="display: inline-block;">
-                <input type="text" placeholder="请输入查询条件">
+                <input type="text" placeholder="请输入查询条件" style="width: 170px;">
                 <input type="button" value="搜索">
             </form>
         </span>
         <!-- 第二种方式 -->
         <!-- <ul class="list">
-            <li class="ele brown second">2019-07-03 16:31:47 </li>
-            <li class="ele brown second">来源:</li>
-            <li class="ele second"><a href="#">中国天气网</a></li>
+            <li class="ele gray second">2019-07-03 16:31:47 </li>
+            <li class="ele gray second">来源:</li>
+            <li class="ele second"><a href="#" class="second nobottomline">中国天气网</a></li>
             <li class="ele">
                 <form action="">
-                    <input type="text" placeholder="请输入查询条件">
+                    <input type="text" placeholder="请输入查询条件 style="width: 170px;">
                     <input type="button" value="搜索">
                 </form>
             </li>
         </ul> -->
     </div>
+    <hr>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, libero. Accusantium voluptate facere minima amet ducimus aspernatur saepe architecto natus consectetur eaque itaque iste, placeat voluptatem incidunt modi nesciunt optio excepturi beatae suscipit harum quia. Dolorum alias voluptatem, labore in, quidem corrupti placeat voluptates, amet qui voluptas saepe est delectus.
+    </p>
+    <h4>气温41.1℃！地温66.5！北京强势迎七月</h4>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus est delectus necessitatibus molestias eius consequuntur cumque sapiente in commodi nam.</p>
+    <div class="center">
+        <img src="1.jpg" alt="" width="500">
+    </div>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ipsam tempore quibusdam cum modi distinctio voluptate pariatur vel nemo ullam!
+    </p>
+    <h4>明日热度再升级！京津翼携手冲击38℃</h4>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, aliquam quidem. Doloribus nemo eius odio odit voluptatum adipisci saepe aliquid tempore delectus alias corporis, neque nobis minus voluptates? Provident ipsa, alias quis voluptatem velit culpa? Nulla assumenda soluta quisquam quia!
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt, beatae. Ratione, velit obcaecati. Illum voluptatibus quidem officia asperiores expedita doloremque?</p>
+    <span class="second darkgrey">本文来源：中国天气网 </span>
+    <span class="second darkgrey">责任编辑：刘京_NO5631</span>
 </body>
 </html>
