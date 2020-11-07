@@ -1,0 +1,38 @@
+背景颜色
+    默认透明，可设置颜色。
+
+背景图片
+    实际开发常见于一些装饰性的小图片或者超大的背景图片，优点是便于控制位置
+    语法：background-image : none | url({url})
+
+背景平铺
+    如果需要在html页面对背景图像进行平铺，可以用background-repeat属性
+    语法：background:repeat | no-repeat | repeat-x | repeat-y
+    默认情况下，背景图片是平铺的
+    repeat-x沿着X轴平铺，同理对于y
+    页面元素既可以添加背景图片也可以添加背景颜色，只不过背景颜色会被背景图片覆盖
+
+背景图片位置
+    1.若参数是方位名词，第一个参数代表X方向上的方位，第二个参数代表Y方向上的方位
+    如：background-position:center top;表示在X方向上居中，Y方向上在上面
+    但是也可以写成background-position:top center，效果一致
+    因为程序在解析时遇到top，top一定是Y方向上的，所以得出另一个center是X方向的
+    如果只指定了一个方位名词，则另一个默认为center
+    2.若参数是精确坐标，那么第一个肯定是X坐标，第二个肯定是Y坐标
+    如：background-position:50px 100px;表示在X轴方向上50px，Y轴方向上100px
+    3.参数是混合单位（这么干的人是sb吧，了解即可）
+    如background-position:20px center;表示X轴方向上20px,Y轴方向上居中
+
+背景图像固定
+    可以设置背景图像是否固定或者随着页面的其余部分滚动
+    background-attachment:scroll | fixed
+    scroll:背景图像随页面滚动
+    fixed:背景图像固定
+
+背景复合写法
+    background:背景颜色 背景图片地址 背景平铺 背景图像滚动 背景图片位置（无顺序要求）
+
+背景颜色半透明
+    background:(0,0,0,0.3)
+    最后一个参数是透明度，0代表100%透明，1代表不透明
+    背景半透明对盒子里的内容无影响
