@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            color: blue!important;
+        }
+        .divclass {
+            color: burlywood;
+        }
+        #divid {
+            color: darkgreen;
+        }
+
+        /* 继承的优先级要小于元素选择器 */
+        #divid2 {
+            color: darkred;
+        }
+        p {
+            color: blue;
+        }
+
+        /* 权重计算：0001(ul) + 0001(li) = 0002 */
+        ul li {
+            color: green;
+        }
+        /* 权重计算：0001 */
+        li {
+            color: grey;
+        }
+        /* 权重计算：0010 + 0001 = 0011 */
+        /* 权重会叠加，但不会进位 */
+        .nav li {
+            color: maroon;
+        }
+    </style>
+</head>
+<body>
+    <div class="divclass" id="divid" style="color: darkred;">
+        hello
+    </div>
+
+    <div id="divid2">
+        <p>world</p>
+    </div>
+
+    <ul class="nav">
+        <li>aaa</li>
+        <li>bbb</li>
+        <li>ccc</li>
+    </ul>
+</body>
+</html>

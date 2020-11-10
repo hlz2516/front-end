@@ -4,13 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table {
+            width: 500px;
+            height: 249px;
+        }
+        table,
+        td {
+            border: 1px solid blueviolet;
+            border-collapse: collapse;
+        }
+    </style>
 </head>
 <body>
      <!-- 为了更好的表示表格的语义，可以把表格分为头部和主体 -->
     <!-- thead表示头部区域，tbody表示主体区域 -->
     <!-- 注意，thead表示的是整个区域，而th表示的是一个单元格;
          thead内部必须包含tr标签 -->
-    <table border="1" align="center" cellpadding="0" cellspacing="0" width="60%">
+    <table align="center" cellpadding="0" cellspacing="0">
         <thead>
             <tr>
                 <th>排名</th>
