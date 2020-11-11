@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            //看下ul下有几个子节点
+            var lis = document.getElementById('ul1');
+            console.log(lis.childNodes.length); //7,因为文本节点也算节点
+
+            //看下ul下子节点的类型
+            for (let index = 0; index < lis.childNodes.length; index++) {
+                console.log(lis.childNodes[index].nodeType);
+                //3 1 3 1 3 1 3
+                //3代表文本节点，1代表元素节点
+            }
+
+            //所以要想操作元素节点，选择节点类型为1的即可
+            for (let index = 0; index < lis.childNodes.length; index++) {
+                const element = lis.childNodes[index];
+                if(element.nodeType == 1){
+                    element.style.background='red';
+                }
+            }
+
+            //另一种方法，使用children来选中不包括文本的子节点（你不早说。。）
+            for (let index = 0; index < lis.children.length; index++) {
+                const element = lis.children[index];
+                element.style.background = 'blue';
+            }
+        }
+    </script>
+</head>
+<body>
+    <ul id="ul1">
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>
