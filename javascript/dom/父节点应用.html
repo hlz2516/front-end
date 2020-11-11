@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+    window.onload=function(){
+        var oa = document.getElementsByTagName('a');
+        for (var index = 0; index < oa.length; index++) {
+            // 不知道为啥，click就不行，mousedown就可以完美触发
+            oa[index].onmousedown=function(){
+                this.parentNode.style.display='none';
+                //console.log('get');
+            }
+        }
+        var oul = document.getElementById('ul1');
+        //IE6-8
+        //oul.firstChild.style['background-color']='red';
+        //高级浏览器
+        oul.firstElementChild.style['background-color'] = 'red';
+    }
+
+    </script>
+</head>
+<body>
+    <ul id="ul1">
+        <li>asdf <a href="">隐藏</a></li>
+        <li>zxc <a href="">隐藏</a></li>
+        <li>ghj <a href="">隐藏</a></li>
+        <li>yui <a href="">隐藏</a></li>
+        <li>qwe <a href="">隐藏</a></li>
+    </ul>
+</body>
+</html>

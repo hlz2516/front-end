@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            var oul = document.getElementById('ul1');
+            var olis = oul.getElementsByTagName('li');
+            for (let index = 0; index < olis.length; index++) {
+                const element = olis[index];
+                if(element.className=='a'){
+                    element.style['background-color'] = 'red';
+                }
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <ul id="ul1">
+        <li class="a"></li>
+        <li></li>
+        <li class="a"></li>
+        <li></li>
+        <li class="a"></li>
+    </ul>
+</body>
+</html>

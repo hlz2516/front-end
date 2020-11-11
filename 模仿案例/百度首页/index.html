@@ -5,9 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            font:13px/23px Arial,sans-serif
+        }
         .list{
             list-style-type: none;
             padding:0%;
+            margin-bottom: 4px;
+        }
+        .text-center {
+            text-align: center;
         }
         .ele{
             margin-top: 4px;
@@ -23,17 +30,30 @@
         .ele a:visited{color: black;}
         .ele a:hover{color: blue;}
         .ele a:active{color: blue;}
-        .button {
-            font: bold 11px Arial;
-            color: thistle;
-            text-decoration: none;
-            background-color: blue;
-            padding: 2px 6px 2px 6px;
-            border-top: 1px solid #CCCCCC;
-            border-right: 1px solid #333333;
-            border-bottom: 1px solid #333333;
-            border-left: 1px solid #CCCCCC;
-        }
+        .btn {
+            width: 48px;
+            height: 24px;
+            display: inline-block;
+            background-color: #4e71f2;
+            font-family: inherit;
+            font-weight: 400;
+            color: #fff!important;
+            text-align: center;
+            vertical-align: middle;
+            outline: 0;
+            border: 0;
+            border-radius: 6px;
+            padding: 0;
+            cursor: pointer;
+         }
+         .imageBox {
+             height: 132px;
+             background-image: url(image1.png);
+             background-repeat: no-repeat;
+             background-position: center top;
+             background-size: 270px 128px;
+             margin-bottom: 10px;
+         }
     </style>
 </head>
 <body>
@@ -45,8 +65,10 @@
         <li class="ele"><a href="#">贴吧</a></li>
         <li class="ele"><a href="#">学术</a></li>
         <li class="ele"><a href="#">更多</a></li>
-        <li class="ele" style="float: right;"><a href="#">登录</a></li>
+        <li class="ele" style="float: right;"><a class="btn" href="#">登录</a></li>
         <li class="ele" style="float: right;"><a href="#">设置</a></li>
     </ul>
+    <div class="imageBox"></div>
+    
 </body>
 </html>

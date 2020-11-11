@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn {
+            /* a原来的display是Inline，无法设置大小所以要改为inline-block */
+            display: inline-block;
+            /* 然后可以设置大小了 */
+            width: 200px;
+            height: 60px;
+            border: blue 1px solid;
+            background-color: blue;
+            /* 将字体颜色强制改为白色，其优先级最高 */
+            color: white!important;
+            /* 去掉下划线 */
+            text-decoration: none;
+            /* 文字水平居中 */
+            text-align: center;
+            /* 文字垂直居中 */
+            line-height: 60px;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var obtn = document.getElementById('btn1');
+            obtn.onclick=function(){
+                alert('do sth here');
+            }
+        }
+    </script>
+</head>
+<body>
+    <a class="btn" id="btn1" href="">测试</a>
+</body>
+</html>

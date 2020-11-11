@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            var olis = document.getElementsByTagName('li');
+            for (let index = 0; index < olis.length; index++) {
+                const element = olis[index];
+                element.onmousedown=function(){
+                    console.log('get');
+                     element.parentNode.removeChild(this);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <ul id="ul1">
+        <li>asdf <a href="">删除</a></li>
+        <li>zxc <a href="">删除</a></li>
+        <li>ghj <a href="">删除</a></li>
+        <li>yui <a href="">删除</a></li>
+        <li>qwe <a href="">删除</a></li>
+    </ul>
+</body>
+</html>
