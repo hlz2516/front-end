@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+            margin: 50px;
+            /* border: 1px solid transparent; */
+            /* padding-top: 50px; 设置该项时要把son的margin-top注释掉 */
+            overflow: hidden;
+        }
+        .son {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            /* 如果father没有做任何设置，margin-top将与father的margin-top合并 */
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html>

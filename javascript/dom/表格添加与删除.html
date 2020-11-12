@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            var otab = document.getElementById('tab1');
+            var oname = document.getElementById('name');
+            var oage = document.getElementById('age');
+            var obtn1 = document.getElementById('btn1');
+            var id = otab.tBodies[0].rows.length;
+
+            obtn1.onclick=function(){
+                var newtr = document.createElement('tr');
+                var newtd1 = document.createElement('td');
+                var newtd2 = document.createElement('td');
+                var newtd3 = document.createElement('td');
+                var newtd4 = document.createElement('td');
+
+                newtd1.innerHTML = ++id;
+                newtd2.innerHTML = oname.value;
+                newtd3.innerHTML = oage.value;
+                newtd4.innerHTML = "<a href='javascript:;'>删除</a>"
+
+                newtr.appendChild(newtd1);
+                newtr.appendChild(newtd2);
+                newtr.appendChild(newtd3);
+                newtr.appendChild(newtd4);
+                otab.tBodies[0].appendChild(newtr);
+
+                newtd4.getElementsByTagName('a')[0].onclick=function(){
+                    otab.tBodies[0].removeChild(this.parentNode.parentNode);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    姓名：<input type="text" id="name">
+    <br>
+    年龄：<input type="text" id="age">
+    <input type="button" id="btn1" value="添加">
+    <table id="tab1" border="1">
+        <thead>
+            <td>ID</td>
+            <td>姓名</td>
+            <td>年龄</td>
+            <td>操作</td>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>张三</td>
+                <td>22</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>李四</td>
+                <td>23</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>王五</td>
+                <td>26</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>张伟</td>
+                <td>22</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            var tab = document.getElementById('tab1');
+            for (let index = 0; index < tab.tBodies[0].rows.length; index++) {
+                var ele =  tab.tBodies[0].rows[index];
+                if(index % 2 == 0){
+                    ele.style.background = '#ccc';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <table id="tab1" border="1">
+        <thead>
+            <td>ID</td>
+            <td>姓名</td>
+            <td>年龄</td>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>张三</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>李四</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>王五</td>
+                <td>26</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>张伟</td>
+                <td>22</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
