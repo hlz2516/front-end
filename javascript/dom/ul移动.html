@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ul1 {
+            background-color: green;
+        }
+        #ul2 {
+            background-color: yellow;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oul1 = document.getElementById('ul1');
+            var oul2 = document.getElementById('ul2');
+            var btn = document.getElementById('btn');
+            btn.onclick=function(){
+                var ele = oul1.children[0];
+                //oul1.removeChild(ele);
+                oul1.appendChild(ele);
+            }
+        }
+    </script>
+</head>
+<body>
+    <ul id="ul1">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <input id="btn" type="button" value="移动">
+    <ul id="ul2">
+
+    </ul>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            var btn = document.getElementById('btn');
+            var ul1 = document.getElementById('ul1');
+            btn.onclick=function(){
+                //第一步，取得所有li,赋给数组
+                var lis = ul1.getElementsByTagName('li');
+                var arr = [];
+                for (let index = 0; index < lis.length; index++) {
+                    arr[index] = lis[index];
+                    //console.log(arr[index].innerHTML);
+                }
+                //第二步，将数组排序
+                arr.sort(function(li1,li2){
+                    var num1 = parseInt(li1.innerHTML);
+                    var num2 = parseInt(li2.innerHTML);
+                    return num1 - num2;
+                })
+                //第三步，以这个数组的顺序append
+                for (let index = 0; index < arr.length; index++) {
+                    const element = arr[index];
+                    ul1.appendChild(element);
+                    alert(element.innerHTML + '已插入到最后');
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input id="btn" type="button" value="排序">
+    <ul id="ul1">
+        <li>21</li>
+        <li>45</li>
+        <li>3</li>
+        <li>66</li>
+        <li>35</li>
+    </ul>
+</body>
+</html>
