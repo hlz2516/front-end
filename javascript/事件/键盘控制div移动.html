@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+        }
+    </style>
+    <script>
+        document.onkeydown = function () {
+            var odiv = document.getElementById('div1');
+            switch (event.keyCode) {
+                case 37:
+                    //alert('左');
+                    odiv.style.left = (odiv.offsetLeft - 10) + 'px';
+                    break;
+                case 38:
+                    //alert('上');
+                    odiv.style.top = (odiv.offsetTop - 10) + 'px';
+                    break;
+                case 39:
+                    //alert('右');
+                    odiv.style.left = (odiv.offsetLeft + 10) + 'px';
+                    break;
+                case 40:
+                    //alert('下');
+                    odiv.style.top = (odiv.offsetTop + 10) + 'px';
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div1"></div>
+</body>
+
+</html>

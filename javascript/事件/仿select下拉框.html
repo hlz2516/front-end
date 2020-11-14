@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1 {
+            width: 200px;
+            height: 200px;
+            background-color: #ccc;
+            display: none;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var obtn = document.getElementById('btn');
+            var odiv = document.getElementById('div1');
+            obtn.onclick=function(){
+                odiv.style.display = 'block';
+                event.cancelBubble = true;
+            }
+            document.onclick = function(){
+                odiv.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <input id="btn" type="button" value="点击">
+    <div id="div1">
+
+    </div>
+</body>
+</html>

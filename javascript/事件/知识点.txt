@@ -1,0 +1,19 @@
+什么是事件对象
+    用来获取事件的详细信息：鼠标位置，键盘按键
+
+document
+    document是网页最大的父级（隐藏），其子级是!(doctype声明)和html
+
+事件流
+    事件冒泡（见例子--事件冒泡.html）
+    当一个节点触发某个事件后，会将这个事件对象抛给该节点的父级，执行相同的事件（如子节点触发的是click事件，
+    那么父节点触发的也是click事件），这个事件对象会一直往父级抛，知道最外层的document
+
+鼠标事件
+    鼠标位置
+    clientX,clientY是可视区坐标
+    要消除滚动条的影响可以加上scrolltop和scrollleft
+
+键盘事件
+    onkeydown和onkeyup(见例子--键盘控制div移动.html)
+    其他属性：ctrlKey,shiftKey,altKey
