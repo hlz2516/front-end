@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flt {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            float: right;
+        }
+        .std {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="std">我是标准流里的第一个盒子</div>
+        <!-- 第二个盒子是向右浮动布局，如果该盒子与第一个盒子同一行，说明浮动和标准是两个互不影响的布局，
+            或者说float是全新的布局，不受标准流的影响
+            如果与第二个盒子同一行，说明浮动受标准流的限制，是拿剩下的布局来做浮动的 -->
+    <div class="flt">我在浮动布局里</div>
+
+    <div class="std">我在标准流里的第二个盒子</div>
+</body>
+</html>
