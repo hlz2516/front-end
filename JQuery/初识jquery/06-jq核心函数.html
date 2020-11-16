@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../lib/jquery.js"></script>
+    <script>
+        //$(); 就代表调用jq的核心函数
+
+        //接收一个函数
+        $(function(){
+            alert('hello');
+        //接收一个字符串选择器
+            var box = $('.box');
+            var box1 =$('#box1');
+            console.log(box);
+            console.log(box1);
+        //接收一个代码片段
+            var p = $('<p>我是P</p>');
+            console.log(p);
+            box1.append(p);
+        //接收一个dom元素
+        //会被包装成一个jq对象返回
+            var span = document.getElementsByTagName('span')[0];
+            console.log(span);
+            var $span = $(span);
+            console.log($span);
+        })
+
+    </script>
+</head>
+<body>
+    <div class="box"></div>
+    <div id="box1"></div>
+    <span></span>
+</body>
+</html>

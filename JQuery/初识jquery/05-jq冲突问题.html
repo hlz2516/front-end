@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../lib/jquery.js"></script>
+    <script src="../../lib/test.js"></script>
+    <!-- 因为test.js中定义了$覆盖了之前jquery中对$的定义，所以引发了冲突 -->
+    <script>
+        //第一种方法,释放jquery中的$的使用权，采用其他方法来调用jquery
+        jQuery.noConflict();
+
+        jQuery(function(){
+            alert('hello');
+        });
+
+        //第二种方法，使用其他符号代替$
+        var jq = jQuery.noConflict();
+        jq(function(){
+            alert('hello2');
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
