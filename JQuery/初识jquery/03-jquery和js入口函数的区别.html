@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../lib/jquery.js"></script>
+    <!-- <script>
+        window.onload=function(){
+            //通过原生js入口函数拿到img元素
+            var img = document.getElementsByTagName('img')[0];
+            console.log(img);
+            //通过原生js入口函数拿到img元素的宽
+            var width = window.getComputedStyle(img).width;
+            console.log('onload',width);
+        }
+        /* 原生js和jquery入口函数的加载模式不同
+            原生js会等到dom元素加载完毕并且图片也加载完毕后才会执行
+            jquery会等到dom元素加载完毕就直接执行 */     
+        $(document).ready(function(){
+            //通过jquery入口函数拿到img元素
+            var $img = $('img');
+            console.log('ready',$img.width());
+        })
+    </script> -->
+    <script>
+        //原生js入口函数只执行一次，且只执行最后位置的入口函数
+        // window.onload=function(){
+        //     alert('hello world1');
+        // }
+        // window.onload=function(){
+        //     alert('hello world2');
+        // }
+
+        //jquery入口函数可执行多次，且后一次不会覆盖前一次
+        $(document).ready(function(){
+            alert('hello world1');
+        });
+        $(document).ready(function(){
+            alert('hello world2');
+        });
+    </script>
+</head>
+<body>
+    <img src="https://misc.360buyimg.com/mtd/pc/index_2019/1.0.0/assets/sprite/header/sprite.png" alt="">
+</body>
+</html>

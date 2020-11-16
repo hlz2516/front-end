@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../lib/jquery.js"></script>
+    <script>
+        $(function(){
+            var div1 = $('div');
+            var div2 = $('.box2');
+            var div3 = $('#box3');
+            console.log(div1);
+            console.log(div2);
+            console.log(div3);
+            div1.css({
+                width:'200px',
+                height:'200px',
+                background:'red'
+            });
+            div2.css({
+                width:'200px',
+                height:'200px',
+                background:'blue'
+            });
+            div3.css({
+                width:'200px',
+                height:'200px',
+                background:'yellow'
+            });
+        });
+    </script>
+</head>
+<body>
+    <div></div>
+    <div class="box2"></div>
+    <div id="box3"></div>
+</body>
+
+</html>

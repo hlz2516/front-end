@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../lib/jquery.js"></script>
+    <script>
+        //第一种
+        $(document).ready(function(){
+            alert('hello1');
+        })
+
+        //第二种
+        jQuery(document).ready(function(){
+            alert('hello2');
+        })
+
+        //第三种(推荐)
+        $(function(){
+            alert('hello3');
+        })
+
+        //第四种
+        jQuery(function(){
+            alert('hello4');
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
