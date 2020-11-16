@@ -5,18 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        * {
+            margin : 0;
+            padding: 0;
+        }
         body {
             font:13px/23px Arial,sans-serif
         }
         .list{
             list-style-type: none;
-            padding:0%;
-            margin-bottom: 4px;
+            height: 60px;
+            margin: 0 6px;
         }
         .text-center {
             text-align: center;
         }
-        .ele{
+        .list li{
             margin-top: 4px;
             margin-left: 13px;
             margin-right: 13px;
@@ -24,13 +28,17 @@
             display:inline-block;
             *display:inline;
             *zoom:1;
+            line-height: 60px;
+        }
+        .list .right {
+            float:right;
         }
         a{text-decoration: none;}
-        .ele a:link{color: black;}
-        .ele a:visited{color: black;}
-        .ele a:hover{color: blue;}
-        .ele a:active{color: blue;}
-        .btn {
+        .list a:link{color: black;}
+        .list a:visited{color: black;}
+        .list a:hover{color: blue;}
+        .list a:active{color: blue;}
+        .right .btn{
             width: 48px;
             height: 24px;
             display: inline-block;
@@ -54,21 +62,31 @@
              background-size: 270px 128px;
              margin-bottom: 10px;
          }
+         .container {
+             height: 314px;
+             border: 1px solid black;
+             background-image: url(logo.png);
+             background-repeat: no-repeat;
+             background-position: top center;
+             margin: 0 298px;
+         }
     </style>
 </head>
 <body>
     <ul class="list">
-        <li class="ele"><a href="#">新闻</a></li>
-        <li class="ele"><a href="#">hao123</a></li>
-        <li class="ele"><a href="#">地图</a></li>
-        <li class="ele"><a href="#">视频</a></li>
-        <li class="ele"><a href="#">贴吧</a></li>
-        <li class="ele"><a href="#">学术</a></li>
-        <li class="ele"><a href="#">更多</a></li>
-        <li class="ele" style="float: right;"><a class="btn" href="#">登录</a></li>
-        <li class="ele" style="float: right;"><a href="#">设置</a></li>
+        <li><a href="#">新闻</a></li>
+        <li><a href="#">hao123</a></li>
+        <li><a href="#">地图</a></li>
+        <li><a href="#">视频</a></li>
+        <li><a href="#">贴吧</a></li>
+        <li><a href="#">学术</a></li>
+        <li><a href="#">更多</a></li>
+        <li class="right"><a class="btn" href="#">登录</a></li>
+        <li class="right"><a href="#">设置</a></li>
     </ul>
-    <div class="imageBox"></div>
-    
+    <!-- <div class="imageBox"></div> -->
+    <div class="container">
+
+    </div>
 </body>
 </html>
