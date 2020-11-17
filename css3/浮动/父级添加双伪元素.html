@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .top {
+            width: 600px;
+            background-color: red;
+            /* 假设top里的子元素不知道有多少个，所以不设高度 */
+        }
+        .top>div {
+            float: left;
+            /* 由于子元素是浮动元素，所以父元素的高度会自动变为0 */
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+        .box {
+            /* box会自动顶上来与top重合 */
+            width: 700px;
+            height: 300px;
+            background-color: yellow;
+        }
+        .clearfix::before,
+        .clearfix::after {
+            content: "";
+            display: table;
+        }
+        .clearfix::after {
+            clear:both;
+        }
+        .clearfix {
+            clear:both;
+        }
+    </style>
+</head>
+<body>
+    <div class="top clearfix">
+        <div></div>
+        <div></div>
+    </div>
+    <div class="box"></div>
+</body>
+</html>
